@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("https://art-projects-server.onrender.com/me").then((r) => {
+    fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }

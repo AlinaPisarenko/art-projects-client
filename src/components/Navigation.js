@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 export default function Navigation({ user, setUser }) {
   const history = useHistory();
   function handleLogoutClick() {
-    fetch("https://art-projects-server.onrender.com/logout", { method: "DELETE" }).then((r) => {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
         history.push(`/`);

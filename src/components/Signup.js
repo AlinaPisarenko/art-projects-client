@@ -7,7 +7,7 @@ export default function Signup({ onLogin }) {
   const handleSignup = async (e) => {
     e.preventDefault();
     let form = new FormData(document.querySelector(`#signup-form`));
-    let req = await fetch(`https://art-projects-server.onrender.com/signup`, {
+    let req = await fetch(`/signup`, {
       method: `POST`,
       body: form,
     });

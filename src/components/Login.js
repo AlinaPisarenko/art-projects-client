@@ -8,14 +8,14 @@ export default function Login({ onLogin }) {
     e.preventDefault();
     let form = new FormData(document.querySelector(`#signup-form`));
 
-    let response = await fetch("https://art-projects-server.onrender.com/login", {
+    let response = await fetch("/login", {
       method: `POST`,
       body: form,
     });
 
     if (response.ok) {
       let user = await response.json();
-      history.push("https://art-projects-server.onrender.com/me");
+      history.push("/me");
       onLogin(user);
     } else {
       response.json().then((err) => console.log(err.errors));
