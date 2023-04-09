@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 export default function Navigation({ user, setUser }) {
   const history = useHistory();
   function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
+    fetch(`${URL}/logout`, { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
         history.push(`/`);

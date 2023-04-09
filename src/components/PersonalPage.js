@@ -25,7 +25,7 @@ export default function PersonalPage({ user }) {
   };
 
   function handleDeletePost(id) {
-    fetch(`/posts/${id}`, {
+    fetch(`${URL}/posts/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

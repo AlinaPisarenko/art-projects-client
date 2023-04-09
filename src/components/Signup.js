@@ -7,7 +7,7 @@ export default function Signup({ onLogin }) {
   const handleSignup = async (e) => {
     e.preventDefault();
     let form = new FormData(document.querySelector(`#signup-form`));
-    let req = await fetch(`/signup`, {
+    let req = await fetch(`${URL}/signup`, {
       method: `POST`,
       body: form,
     });

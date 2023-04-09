@@ -8,7 +8,7 @@ export default function Login({ onLogin }) {
     e.preventDefault();
     let form = new FormData(document.querySelector(`#signup-form`));
 
-    let response = await fetch("/login", {
+    let response = await fetch(`${URL}/login`, {
       method: `POST`,
       body: form,
     });
