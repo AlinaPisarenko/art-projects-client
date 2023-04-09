@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewPostForm from "./NewPostForm";
-import { useHistory } from "react-router-dom";
-import UsersProjects from "./UsersProjects";
+// import { useHistory } from "react-router-dom";
+// import UsersProjects from "./UsersProjects";
 import EachPost from "./EachPost";
 
 export default function PersonalPage({ user }) {
@@ -47,11 +47,11 @@ export default function PersonalPage({ user }) {
         <div className="personal-page">
           <div className="personal-info">
             <h2 className="user-name">{user.name}.</h2>
-            <btn className="add-btn" onClick={handleClick}>
+            <a className="add-btn" onClick={handleClick}>
               Add new +
-            </btn>
+            </a>
           </div>
-          <div>{!posts ? <span class="loader"></span> : mapPosts}</div>
+          <div>{!posts ? <span className="loader"></span> : mapPosts}</div>
         </div>
       </div>
 

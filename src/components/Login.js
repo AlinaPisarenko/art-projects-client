@@ -57,7 +57,7 @@ export default function Login({ onLogin }) {
             id="password"
             name="password"
           />
-          <label for="password" class="form__label">
+          <label for="password" className="form__label">
             Password
           </label>
         </div>

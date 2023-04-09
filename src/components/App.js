@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       {loading ? (
-        <span class="loader"></span>
+        <span className="loader"></span>
       ) : (
         <div className="App">
           <CustomCursor />
@@ -62,7 +62,7 @@ function App() {
 
             <Route exact path="/me">
               {!user ? (
-                <span class="loader"></span>
+                <span className="loader"></span>
               ) : (
                 <PersonalPage user={user} />
               )}

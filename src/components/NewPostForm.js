@@ -44,7 +44,7 @@ export default function NewPostForm({ onAddPost, user, handleCloseModal }) {
               id="image-url"
               name="image"
             />
-            <label for="image-url" class="form__label">
+            <label for="image-url" className="form__label">
               Image URL
             </label>
           </div>

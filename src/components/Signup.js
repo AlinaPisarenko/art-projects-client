@@ -32,7 +32,7 @@ export default function Signup({ onLogin }) {
             id="name"
             name="name"
           />
-          <label for="name" class="form__label">
+          <label for="name" className="form__label">
             Full name
           </label>
         </div>
@@ -45,7 +45,7 @@ export default function Signup({ onLogin }) {
             id="username"
             name="username"
           />
-          <label for="username" class="form__label">
+          <label for="username" className="form__label">
             Username
           </label>
         </div>
@@ -58,7 +58,7 @@ export default function Signup({ onLogin }) {
             id="email"
             name="email"
           />
-          <label for="email" class="form__label">
+          <label for="email" className="form__label">
             Email
           </label>
         </div>
@@ -71,7 +71,7 @@ export default function Signup({ onLogin }) {
             id="password"
             name="password"
           />
-          <label for="password" class="form__label">
+          <label for="password" className="form__label">
             Password
           </label>
         </div>
