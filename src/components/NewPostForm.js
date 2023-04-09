@@ -6,7 +6,7 @@ export default function NewPostForm({ onAddPost, user, handleCloseModal }) {
 
     let form = new FormData(document.querySelector(`#new-post-form`));
     form.append("user_id", user.id);
-    let response = await fetch(`/posts`, {
+    let response = await fetch(`https://art-projects-server.onrender.com/posts`, {
       method: `POST`,
       body: form,
     });

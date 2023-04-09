@@ -3,29 +3,19 @@ import { useHistory } from "react-router-dom";
 
 export default function Login({ onLogin }) {
   const history = useHistory();
-  // const [errors, setErrors] = useState([]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
     let form = new FormData(document.querySelector(`#signup-form`));
 
-    // try {
-    //   let response = await fetch(`/login`, {
-    //     method: `POST`,
-    //     body: form,
-    //   });
-    //   let user = await response.json();
-    // } catch (err) {
-    //   console.log(err);
-    // }
-
-    let response = await fetch(`/login`, {
+    let response = await fetch("https://art-projects-server.onrender.com/login", {
       method: `POST`,
       body: form,
     });
 
     if (response.ok) {
       let user = await response.json();
-      history.push(`/me`);
+      history.push("https://art-projects-server.onrender.com/me");
       onLogin(user);
     } else {
       response.json().then((err) => console.log(err.errors));

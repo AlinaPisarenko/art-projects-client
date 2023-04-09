@@ -23,7 +23,7 @@ export default class Wheel extends Component {
     //   this.setState({ timeout: !this.timeout });
     // }, 5000);
 
-    fetch("/posts")
+    fetch("https://art-projects-server.onrender.com/posts")
       .then((res) => res.json())
       .then((data) => this.setState({ posts: data }));
 

@@ -10,7 +10,7 @@ export default function Project(user) {
   const { name, medium, image, theme, description, price, reviews } =
     projectData;
   function getProjectInfoFetch() {
-    fetch(`/projects/${id}`)
+    fetch(`https://art-projects-server.onrender.com/projects/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(res.status);
@@ -35,7 +35,7 @@ export default function Project(user) {
       user_id: user.user.id,
       post_id: +id,
     };
-    let response = await fetch(`/review`, {
+    let response = await fetch(`https://art-projects-server.onrender.com/review`, {
       method: `POST`,
       headers: {
         "content-type": "application/json",

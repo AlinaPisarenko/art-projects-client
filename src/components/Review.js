@@ -10,7 +10,7 @@ function Review( props ) {
     const { user } = props
 
     function handleDelete(review_id) {
-        fetch(`/review/${review_id}`, 
+        fetch(`https://art-projects-server.onrender.com/review/${review_id}`, 
         {method: "DELETE"})
         let reviewsToDisplay = props.allReviews.filter((review) => 
             review.id !== review_id)
@@ -35,7 +35,7 @@ function Review( props ) {
         let form = new FormData(document.querySelector(`#review-content-form`));
         let newContent = e.target.content.value;
 
-        let response = await fetch(`/reviews/${id}`, {
+        let response = await fetch(`https://art-projects-server.onrender.com/reviews/${id}`, {
             method: `PATCH`,
             body: form,
           });

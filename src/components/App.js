@@ -11,6 +11,8 @@ import CustomCursor from "./CustomCursor/CustomCursor";
 import "../sass/main.scss";
 import { Route, Link, Switch, useHistory } from "react-router-dom";
 
+const URL = 'https://art-projects-server.onrender.com'
+
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,7 +25,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/me").then((r) => {
+    fetch("https://art-projects-server.onrender.com/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
