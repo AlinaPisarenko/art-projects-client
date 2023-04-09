@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import { URL } from "./App"
 
 export default class Wheel extends Component {
   constructor(props) {

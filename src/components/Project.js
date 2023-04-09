@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Review from "./Review";
 import "../sass/project.scss";
+import { URL } from "./App"
+
+
 export default function Project(user) {
   const [projectData, setProjectData] = useState([]);
   const [allReviews, setAllReviews] = useState([]);

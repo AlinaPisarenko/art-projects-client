@@ -1,4 +1,5 @@
 import React from "react";
+import { URL } from "./App"
 
 export default function NewPostForm({ onAddPost, user, handleCloseModal }) {
   const handleSubmit = async (e) => {

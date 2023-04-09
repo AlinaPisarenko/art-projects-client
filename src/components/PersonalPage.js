@@ -3,6 +3,7 @@ import NewPostForm from "./NewPostForm";
 // import { useHistory } from "react-router-dom";
 // import UsersProjects from "./UsersProjects";
 import EachPost from "./EachPost";
+import { URL } from "./App"
 
 export default function PersonalPage({ user }) {
   const [posts, setPosts] = useState(user.posts);

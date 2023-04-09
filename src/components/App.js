@@ -11,7 +11,7 @@ import CustomCursor from "./CustomCursor/CustomCursor";
 import "../sass/main.scss";
 import { Route, Link, Switch, useHistory } from "react-router-dom";
 
-const URL = 'https://art-projects-server.onrender.com'
+export const URL = 'https://art-projects-server.onrender.com'
 
 function App() {
   const [user, setUser] = useState(null);

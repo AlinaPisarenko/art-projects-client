@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { URL } from "./App"
 
 export default function Navigation({ user, setUser }) {
   const history = useHistory();

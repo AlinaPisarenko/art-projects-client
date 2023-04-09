@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../sass/review.scss';
+import { URL } from "./App"
 
 
 function Review( props ) {
