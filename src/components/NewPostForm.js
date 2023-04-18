@@ -2,11 +2,15 @@ import React from "react";
 import { URL } from "./App"
 
 export default function NewPostForm({ onAddPost, user, handleCloseModal }) {
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(user)
     let form = new FormData(document.querySelector(`#new-post-form`));
     form.append("user_id", user.id);
+
+ 
+
     let response = await fetch(`${URL}/posts`, {
       method: `POST`,
       body: form,

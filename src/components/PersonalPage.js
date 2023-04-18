@@ -9,7 +9,7 @@ export default function PersonalPage({ user }) {
   const [posts, setPosts] = useState(user.posts);
   const [modal, setModal] = useState(false);
 
-  const mapPosts = posts.map((el) => {
+  const mapPosts = posts?.map((el) => {
     return (
       <EachPost key={el.id} post={el} handleDeletePost={handleDeletePost} />
     );
